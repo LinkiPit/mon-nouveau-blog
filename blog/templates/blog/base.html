@@ -1,7 +1,7 @@
 {% load static %}
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>Animalerie</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -9,15 +9,18 @@
     </head>
     <body>
     <div class="page-header">
-        <h1><a href="/">Django Girls Blog</a></h1>
+        <h1><a href="/">L'animalerie de Didier</a></h1>
     </div>
     <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
+                <table>
+                    <colgroup>
+                      <col>
+                       <col>
+                        <col>
+    </colgroup>
             {% block content %}
             {% endblock %}
-            </div>
-        </div>
+                </table>
     </div>
 </body>
 </html>

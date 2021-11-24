@@ -19,16 +19,18 @@ body {
     text-decoration: none;
 }
 
-.content {
-    margin-left: 40px;
+
+th {
+    border: 1px solid rgb(100, 100, 100);
+    padding: 100px 10px;
+}
+
+td {
+    text-align: center;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
-}
-
-.date {
-    color: #828282;
+    font-family: 'Lobster'
 }
 
 .save {
