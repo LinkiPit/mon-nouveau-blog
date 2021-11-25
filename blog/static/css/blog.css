@@ -1,5 +1,5 @@
 h1 a, h2 a {
-    color: #C25100;
+    color: #FFFF00;
     font-family: 'Lobster';
 }
 
@@ -8,7 +8,7 @@ body {
 }
 
 .page-header {
-    background-color: #C25100;
+    background-color: #FFFF00;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -21,8 +21,8 @@ body {
 
 
 th {
-    border: 1px solid rgb(100, 100, 100);
-    padding: 100px 10px;
+    border: 0px solid rgb(255, 255, 255);
+    padding: 10px 10px;
 }
 
 td {
