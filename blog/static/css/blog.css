@@ -1,20 +1,23 @@
+div { text-align: center; }
+
 h1 a, h2 a {
-    color: #FFFF00;
-    font-family: 'Lobster';
+    color: #000000;
 }
 
 body {
-    padding-left: 15px;
+    padding-left: 0px;
 }
 
 .page-header {
-    background-color: #FFFF00;
+    background-color: #F4A460;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 20px 50px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    font-family: Arial black, serif;
+    font-style: italic;
+    color: #000000;
     font-size: 36pt;
     text-decoration: none;
 }
@@ -22,16 +25,20 @@ body {
 
 th {
     border: 0px solid rgb(255, 255, 255);
-    padding: 10px 10px;
+    padding: 10px 15px;
 }
 
-td {
+.td {
     text-align: center;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lobster'
+h3 {
+    color: #008B8B;
 }
+
+h1, h2, h3, h4 {
+     text-align: center;
+ }
 
 .save {
     float: right;
@@ -48,10 +55,20 @@ h1, h2, h3, h4 {
     margin-right: 20px;
 }
 
-.post {
-    margin-bottom: 70px;
+.thumbnail {
+    background-color: #F5DEB3;
+    height : 480px;
+    padding : 20px, 20px, 20px, 20px;
 }
 
-.post h2 a, .post h2 a:visited {
-    color: #000000;
+.fiche_animal {
+    background-color: #F5DEB3;
+    height : 450px;
+    width : 100%;
+}
+
+.menu {
+    background-color: #F5DEB3;
+    height : 450px;
+    witdh : 10%;
 }

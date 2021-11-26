@@ -15,18 +15,37 @@
     <h1><a href="/">L'animalerie de Didier</a></h1>
       </div>
 
-<div class="content container">
-            {% block content %}
-        {% for billet in billets %}
-            <tr>
-        <div class="billet">
-            <th><h2>{{ billet.id_animal }}</h2></th>
-            <th><p>{{ billet.etat}}</p></th>
-            <th><p>{{ billet.lieu}}</p></th>
-        </div>
-            </tr>
+
+      {% block content %}
+        {% for animal in animaux %}
+         <div class="col-md-4">
+            <div class="thumbnail">
+                <div class="animal">
+                    {% if animal.id_animal == 'Tic' %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}"><img alt='Tic' src='https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/b/1/7/b17e4ee817_50159497_animaux-rayure10.jpg' class="img-circle" width="400" height="300" ></a></p>
+                    {% endif %}
+                     {% if animal.id_animal == 'Tac' %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}"><img alt='Tac' src='https://farm6.static.flickr.com/5622/23471010495_62a7a575ca_b.jpg' class="img-circle" width="400" height="300" ></a></p>
+                    {% endif %}
+                     {% if animal.id_animal == 'Totoro' %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}"><img alt='Totoro' src='http://nextews.com/images/b4/c8/b4c87f0c7e7e0ed5.jpg' class="img-circle" width="400" height="300" ></a></p>
+                    {% endif %}
+                     {% if animal.id_animal == 'Patrick' %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}"><img alt='Patrick' src='https://www.zooplus.fr/magazine/wp-content/uploads/2019/08/race-de-hamster-1-768x512.jpg' class="img-circle" width="400" height="300" ></a></p>
+                    {% endif %}
+                     {% if animal.id_animal == 'Pocahontas' %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}"><img alt='Pocahontas' src='http://www.ecriplume.com/blog/wp-content/uploads/2013/08/18493404.jpg' class="img-circle" width="400" height="300" ></a></p>
+                    {% endif %}
+                    <h2 style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a></h2>
+                    <h3 style="text-align:center">{{ animal.etat}}</h3>
+                 <h3 style="text-align:center">{{ animal.lieu}}</h3>
+                </div>
+            </div>
+            </div>
              {% endfor %}
         {% endblock %}
+    </div>
+  </div>
 </div>
 
     </body>

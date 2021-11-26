@@ -1,6 +1,63 @@
+{% extends 'blog/base.html' %}
+{% load static %}
 {% block content %}
-    <div class="billet">
-        <h2>{{ billet.id_animal }}</h2>
-        <p>{{ billet.etat|linebreaksbr }}</p>
+
+
+</div>
+        <div class="row">
+
+         <div class="col-md-2">
+             <div class="menu">
+             {% for animal in animaux %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a></p>
+                    <p style="text-align:center">{{ animal.etat}}</p>
+                 <p style="text-align:center">{{ animal.lieu}}</p>
+                 {% endfor %}
+            </div>
+            </div>
+
+
+
+<div class = "col-md-10">
+<div class="fiche_animal">
+    <br>
+    {% if animal.id_animal == 'Tic' %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}"><img alt='Tic' src='https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/b/1/7/b17e4ee817_50159497_animaux-rayure10.jpg' class="img-circle" width="200" height="150" ></a></p>
+                    {% endif %}
+                     {% if animal.id_animal == 'Tac' %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}"><img alt='Tac' src='https://farm6.static.flickr.com/5622/23471010495_62a7a575ca_b.jpg' class="img-circle" width="200" height="150" ></a></p>
+                    {% endif %}
+                     {% if animal.id_animal == 'Totoro' %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}"><img alt='Totoro' src='http://nextews.com/images/b4/c8/b4c87f0c7e7e0ed5.jpg' class="img-circle" width="200" height="150" ></a></p>
+                    {% endif %}
+                     {% if animal.id_animal == 'Patrick' %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}"><img alt='Patrick' src='https://www.zooplus.fr/magazine/wp-content/uploads/2019/08/race-de-hamster-1-768x512.jpg' class="img-circle" width="200" height="150" ></a></p>
+                    {% endif %}
+                     {% if animal.id_animal == 'Pocahontas' %}
+                    <p style="text-align:center"><a href="{% url 'post_details' id_animal=animal.id_animal %}"><img alt='Pocahontas' src='http://www.ecriplume.com/blog/wp-content/uploads/2013/08/18493404.jpg' class="img-circle" width="200" height="150" ></a></p>
+                    {% endif %}
+    <h1>
+        <a href="{% url 'post_details' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a>
+    </h1>
+    <div>
+        <h3>Equipement actuel : {{animal.lieu}}</h3>
     </div>
+    <div>
+        <h3>Etat actuel : {{animal.etat}}</h3>
+    </div>
+    <form method="POST" class="post-form">{% csrf_token %}
+        <b> Changer : </b> {{ form.as_ul }}
+        <button type="submit" class="btn btn-outline-light">OK</button>
+        <a href="{% url 'post_list' %}">Back</a>
+    </form>
+</div>
+</div>
+ </div>
+</div>
+{% if message != '' or message != null %}
+        <div class="alert alert-warning" role="alert">
+            {{message}}
+        </div>
+{% endif %}
+
 {% endblock %}
